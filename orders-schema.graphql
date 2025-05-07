@@ -22,16 +22,6 @@ type Query {
   """
   order(id: ID!): Order 
   @authenticated
-  @connect(
-      source: "api"
-      http: { GET: "/orders/{$args.id}" }
-      selection: """
-      id
-      buyer: { id: customerId }
-      items: $.variantIds { id: $ }
-      """
-      entity: true
-    )
 }
 
 """
