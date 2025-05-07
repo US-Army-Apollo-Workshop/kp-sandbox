@@ -7,6 +7,10 @@ extend schema
       "@requiresScopes",
     ]
   )
+  @link(
+    url: "https://specs.apollo.dev/connect/v0.1"
+    import: ["@connect", "@source"]
+  )
 
 type Query {
   """
